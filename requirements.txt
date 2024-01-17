@@ -1,0 +1,8 @@
+requests
+beautifulsoup4
+bs4
+SQLAlchemy
+pyTelegramBotAPI
+mysql-connector-python
+lxml
+prettytable
