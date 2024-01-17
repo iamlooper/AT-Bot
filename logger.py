@@ -1,22 +1,36 @@
 import logging
+from logging.handlers import RotatingFileHandler
 import os
+import shutil
 
 from config import (
-    LOG_FILE, 
+    LOG_FILE,
     ENABLE_LOGGER
 )
+
+MAX_LOG_FILE_SIZE = 1 * 1024 * 1024  # 1MB
 
 # Configure logger.
 LOGGER = logging.getLogger(__name__)
 LOGGER.setLevel(level=logging.INFO)
 
 # Create file handler for logging.
-_HANDLER = logging.FileHandler(os.path.join(os.path.dirname(os.path.abspath(__file__)), LOG_FILE))
-_HANDLER.setLevel(logging.INFO)
-_HANDLER.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+log_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), LOG_FILE)
 
-# Add file handler to the logger.
-LOGGER.addHandler(_HANDLER)
+def setup_logging():
+    # Add rotating file handler to the logger.
+    file_handler = RotatingFileHandler(log_file_path, maxBytes=MAX_LOG_FILE_SIZE, backupCount=1)
+    file_handler.setLevel(logging.INFO)
+    file_handler.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+    LOGGER.addHandler(file_handler)
+
+# Create or touch an empty log file.
+if not os.path.exists(log_file_path):
+    with open(log_file_path, 'a'):
+        os.utime(log_file_path, None)
+
+# Initialize logging setup.
+setup_logging()
 
 def write_log_info(*text):
     # Write log messages with info level.
