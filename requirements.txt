@@ -6,3 +6,4 @@ pyTelegramBotAPI
 mysql-connector-python
 lxml
 prettytable
+gitpython
