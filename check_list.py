@@ -20,22 +20,12 @@ class Magisk(GithubReleases):
     fullname = "Magisk Stable"
     repository_url = "topjohnwu/Magisk"
     developer = "topjohnwu"
-    
-class PLM(GithubReleases):
-    fullname = "Pixel Launcher Mod"
-    repository_url = "TeamFiles/PixelLauncherM"
-    developer = "TeamFiles"
-    
+        
 class UniversalSafetyNetFix(GithubReleases):
     fullname = "Universal SafetyNet Fix"
     repository_url = "kdrag0n/safetynet-fix"
     developer = "kdrag0n"
-    
-class BootloopSaver(GithubReleases):
-    fullname = "Magisk Bootloop Saver"
-    repository_url = "Magisk-Modules-Alt-Repo/HuskyDG_BootloopSaver"
-    developer = "HuskyDG"
-    
+        
 class Lsposed(GithubReleases):
     fullname = "LSPosed"
     repository_url = "LSPosed/LSPosed" 
@@ -65,12 +55,7 @@ class YAKT(GithubReleases):
     fullname = "Yet Another Kernel Tweaker"
     repository_url = "NotZeetaa/YAKT"    
     developer = "NotZeetaa"    
-    
-class MagiskOverlayFS(GithubReleases):
-    fullname = "Magisk OverlayFS"
-    repository_url = "Magisk-Modules-Alt-Repo/magisk_overlayfs"    
-    developer = "HuskyDG"        
-    
+        
 class AudioMiscSettings(GithubReleases):
     fullname = "Audio Misc. Settings"
     repository_url = "Magisk-Modules-Alt-Repo/audio-misc-settings"    
@@ -80,12 +65,7 @@ class TrichromeLibrarySquoosh(GithubReleases):
     fullname = "TrichromeLibrary Squoosh"
     repository_url = "entr0pia/trichromelibrary-squoosh"    
     developer = "entr0pia"     
-    
-class MARS(GithubReleases):
-    fullname = "Miustone's Android Restoration Software"
-    repository_url = "Magisk-Modules-Alt-Repo/MARS" 
-    developer = "Miustone"         
-    
+        
 class MiXplorerMM(GithubReleases):
     fullname = "MiXplorer Magisk Module"
     repository_url = "Magisk-Modules-Alt-Repo/MiXplorer" 
@@ -100,12 +80,7 @@ class ToyBoxExt(GithubReleases):
     fullname = "ToyBox (Ext)"
     repository_url = "Magisk-Modules-Alt-Repo/ToyBox-Ext" 
     developer = "zgfg"          
-    
-class LawnchairMM(GithubReleases):
-    fullname = "Lawnchair Magisk Module"
-    repository_url = "Magisk-Modules-Alt-Repo/Lawnchair" 
-    developer = "Psk-Ita"          
- 
+       
 class MagicToolFlash(GithubReleases):
     fullname = "Magic ToolFlash"
     repository_url = "Magisk-Modules-Alt-Repo/magic-flash" 
@@ -407,8 +382,8 @@ class PLOMA13(PlingCheck):
     p_id = 1915907  
     developer = "saitama96"      
     
-class AOSPEnhancer(PlingCheck):
-    fullname = "AOSP Enhancer"
+class AndroidEnhancer(PlingCheck):
+    fullname = "Android Enhancer"
     p_id = 1875251  
     developer = "iamlooper"     
                
@@ -437,23 +412,18 @@ class LiteGApps(SfCheck):
 CHECK_LIST = (
     # Github
     Magisk,
-    PLM,
     UniversalSafetyNetFix,
-    BootloopSaver,
     Lsposed,
     Shamiko,
     AOSPMods,
     OpenFonts,
     AudioJitterSilencer,
     YAKT,
-    MagiskOverlayFS,
     AudioMiscSettings,
     TrichromeLibrarySquoosh,
-    MARS,
     MiXplorerMM,
     ACC,
     ToyBoxExt,
-    LawnchairMM,
     MagicToolFlash,
     MicroGInstallerRevived,
     XmlPak,
@@ -511,7 +481,7 @@ CHECK_LIST = (
     Nitron,
     Magnetar,
     PLOMA13,
-    AOSPEnhancer,
+    AndroidEnhancer,
     CoolModules, 
     PixelLauncherExtended,
     # Sourceforge
