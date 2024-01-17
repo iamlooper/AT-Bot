@@ -36,9 +36,9 @@ class Shamiko(GithubReleases):
     repository_url = "LSPosed/LSPosed.github.io"    
     developer = "LSPosed"   
     
-class AOSPMods(GithubReleases):
-    fullname = "AOSP Mods"
-    repository_url = "siavash79/AOSPMods"    
+class PixelXpert(GithubReleases):
+    fullname = "PixelXpert"
+    repository_url = "siavash79/PixelXpert"    
     developer = "siavash79"
     
 class OpenFonts(GithubReleases):
@@ -415,7 +415,7 @@ CHECK_LIST = (
     UniversalSafetyNetFix,
     Lsposed,
     Shamiko,
-    AOSPMods,
+    PixelXpert,
     OpenFonts,
     AudioJitterSilencer,
     YAKT,
