@@ -19,7 +19,7 @@ while True:
     
         # There are updates available.
         print("Updates available. Updating now...")
-        repo.git.pull()
+        repo.git.pull(force=True)
 
         # Get the commit details.
         commit_details = repo.git.log(n=1)
