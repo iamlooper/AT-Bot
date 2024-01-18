@@ -305,6 +305,12 @@ class Lemuroid(GithubReleases):
     developer = "Swordfish90"    
     description = "Lemuroid is an open-source emulation project for Android based on Libretro."
     
+class LoopHabitTracker(GithubReleases):
+    fullname = "Loop Habit Tracker"
+    repository_url = "iSoron/uhabits" 
+    developer = "iSoron"    
+    description = "Loop Habit Tracker, a mobile app for creating and maintaining long-term positive habits."
+        
 # Pling
     
 class Pixelify(PlingCheck):
@@ -465,6 +471,7 @@ CHECK_LIST = (
     AmazeFileManager,
     UngoogledChromiumAndroid,
     Lemuroid,
+    LoopHabitTracker,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
