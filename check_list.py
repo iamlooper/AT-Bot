@@ -315,8 +315,50 @@ class ActivityManager(GithubReleases):
     fullname = "Activity Manager"
     repository_url = "sdex/ActivityManager" 
     developer = "sdex"    
-    description = "Discover activities of installed applications, run them, and create shortcuts."    
-        
+    description = "Discover activities of installed applications, run them, and create shortcuts."
+
+class BuiltIn-BusyBox(GithubReleases):
+    fullname = "BuiltIn-BusyBox"
+    repository_url = "zgfg/BuiltIn-BusyBox" 
+    developer = "zgfg"    
+    description = "Systemless Magisk module to install BusyBox binary with its applets (UNIX/Linux command-line utilities)."
+
+class systemless hosts KernelSU module(GithubReleases):
+    fullname = "systemless hosts KernelSU module"
+    repository_url = "symbuzzer/systemless-hosts-KernelSU-module" 
+    developer = "symbuzzer"    
+    description = "Required module to use applications such as AdAway on KernelSU."
+
+class Universal SafetyNet & Play Integrity Fix [MOD](GithubReleases):
+    fullname = "Universal SafetyNet & Play Integrity Fix [MOD]"
+    repository_url = "Displax/safetynet-fix" 
+    developer = "Displax"    
+    description = "Magisk module to work around Google's SafetyNet and Play Integrity attestation."
+
+class Play Integrity Fix(GithubReleases):
+    fullname = "Play Integrity Fix"
+    repository_url = "chiteroman/PlayIntegrityFix" 
+    developer = "chiteroman"    
+    description = "This module attempts to fix Play Integrity verdicts to get a certified device on bootloader unlocked devices."
+
+class Disable Rotation Suggest(GithubReleases):
+    fullname = "Disable Rotation Suggest"
+    repository_url = "SAPTeamDEV/disable-rotate-suggest" 
+    developer = "SAPTeamDEV"    
+    description = "Permanently disables the rotate screen suggestion feature in Android P+ AOSP-Like roms works in LOS, Pixel Experience and other AOSP roms."
+
+class Zygisk Next(GithubReleases):
+    fullname = "Zygisk Next"
+    repository_url = "Dr-TSNG/ZygiskNext" 
+    developer = "Dr-TSNG"    
+    description = "Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk."
+
+class Magisk Overlayfs(GithubReleases):
+    fullname = "Magisk Overlayfs"
+    repository_url = "HuskyDG/magic_overlayfs" 
+    developer = "HuskyDG"    
+    description = "Make system partition become read-write (it is also possible without Magisk)."
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -407,7 +449,12 @@ class CoolModules(PlingCheck):
 class PixelLauncherExtended(PlingCheck):
     fullname = "Pixel Launcher Extended"
     p_id = 1952604  
-    developer = "saitama96"         
+    developer = "saitama96"   
+
+class PixelPropsUp(PlingCheck):
+    fullname = "PixelPropsUp"
+    p_id = 1920041  
+    developer = "pixlos"
     
 # Sourceforge    
     
@@ -479,6 +526,14 @@ CHECK_LIST = (
     Lemuroid,
     LoopHabitTracker,
     ActivityManager,
+    BuiltIn-BusyBox,
+    Universal GMS Doze,
+    systemless hosts KernelSU module,
+    Universal SafetyNet & Play Integrity Fix [MOD],
+    Play Integrity Fix,
+    Disable Rotation Suggest,
+    Zygisk Next,
+    Magisk Overlayfs,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
@@ -498,6 +553,7 @@ CHECK_LIST = (
     AndroidEnhancer,
     CoolModules, 
     PixelLauncherExtended,
+    PixelPropsUp,
     # Sourceforge
     MagiskGApps,
     LiteGApps
