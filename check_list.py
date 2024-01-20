@@ -310,6 +310,12 @@ class LoopHabitTracker(GithubReleases):
     repository_url = "iSoron/uhabits" 
     developer = "iSoron"    
     description = "Loop Habit Tracker, a mobile app for creating and maintaining long-term positive habits."
+    
+class ActivityManager(GithubReleases):
+    fullname = "Activity Manager"
+    repository_url = "sdex/ActivityManager" 
+    developer = "sdex"    
+    description = "Discover activities of installed applications, run them, and create shortcuts."    
         
 # Pling
     
@@ -472,6 +478,7 @@ CHECK_LIST = (
     UngoogledChromiumAndroid,
     Lemuroid,
     LoopHabitTracker,
+    ActivityManager,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
