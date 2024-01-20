@@ -317,43 +317,43 @@ class ActivityManager(GithubReleases):
     developer = "sdex"    
     description = "Discover activities of installed applications, run them, and create shortcuts."
 
-class BuiltIn-BusyBox(GithubReleases):
-    fullname = "BuiltIn-BusyBox"
+class BuiltInBusyBox(GithubReleases):
+    fullname = "BuiltIn BusyBox"
     repository_url = "zgfg/BuiltIn-BusyBox" 
     developer = "zgfg"    
     description = "Systemless Magisk module to install BusyBox binary with its applets (UNIX/Linux command-line utilities)."
 
-class systemless hosts KernelSU module(GithubReleases):
-    fullname = "systemless hosts KernelSU module"
-    repository_url = "symbuzzer/systemless-hosts-KernelSU-module" 
+class SystemlessHostsKernelSUModule(GithubReleases):
+    fullname = "Systemless Hosts Module (KernelSU)"
+    repository_url = "symbuzzer/systemless-hosts-KernelSU-module"
     developer = "symbuzzer"    
     description = "Required module to use applications such as AdAway on KernelSU."
 
-class Universal SafetyNet & Play Integrity Fix [MOD](GithubReleases):
-    fullname = "Universal SafetyNet & Play Integrity Fix [MOD]"
+class UniversalSafetyNetAndPlayIntegrityFixMod(GithubReleases):
+    fullname = "Universal SafetyNet & Play Integrity Fix (Mod)"
     repository_url = "Displax/safetynet-fix" 
     developer = "Displax"    
     description = "Magisk module to work around Google's SafetyNet and Play Integrity attestation."
 
-class Play Integrity Fix(GithubReleases):
+class PlayIntegrityFix(GithubReleases):
     fullname = "Play Integrity Fix"
     repository_url = "chiteroman/PlayIntegrityFix" 
     developer = "chiteroman"    
     description = "This module attempts to fix Play Integrity verdicts to get a certified device on bootloader unlocked devices."
 
-class Disable Rotation Suggest(GithubReleases):
+class DisableRotationSuggest(GithubReleases):
     fullname = "Disable Rotation Suggest"
     repository_url = "SAPTeamDEV/disable-rotate-suggest" 
     developer = "SAPTeamDEV"    
     description = "Permanently disables the rotate screen suggestion feature in Android P+ AOSP-Like roms works in LOS, Pixel Experience and other AOSP roms."
 
-class Zygisk Next(GithubReleases):
+class ZygiskNext(GithubReleases):
     fullname = "Zygisk Next"
     repository_url = "Dr-TSNG/ZygiskNext" 
     developer = "Dr-TSNG"    
     description = "Standalone implementation of Zygisk, providing Zygisk API support for KernelSU and a replacement of Magisk's built-in Zygisk."
 
-class Magisk Overlayfs(GithubReleases):
+class MagiskOverlayfs(GithubReleases):
     fullname = "Magisk Overlayfs"
     repository_url = "HuskyDG/magic_overlayfs" 
     developer = "HuskyDG"    
@@ -526,14 +526,13 @@ CHECK_LIST = (
     Lemuroid,
     LoopHabitTracker,
     ActivityManager,
-    BuiltIn-BusyBox,
-    Universal GMS Doze,
-    systemless hosts KernelSU module,
-    Universal SafetyNet & Play Integrity Fix [MOD],
-    Play Integrity Fix,
-    Disable Rotation Suggest,
-    Zygisk Next,
-    Magisk Overlayfs,
+    BuiltInBusyBox,
+    SystemlessHostsKernelSUModule,
+    UniversalSafetyNetAndPlayIntegrityFixMod,
+    PlayIntegrityFix,
+    DisableRotationSuggest,
+    ZygiskNext,
+    MagiskOverlayfs,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
