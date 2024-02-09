@@ -359,6 +359,12 @@ class MagiskOverlayfs(GithubReleases):
     developer = "HuskyDG"    
     description = "Make system partition become read-write (it is also possible without Magisk)."
 
+class SpotX(GithubReleases):
+    fullname = "SpotX"
+    repository_url = "SpotX-Official/SpotX" 
+    developer = "SpotX-Official"    
+    description = "SpotX patcher used for patching the desktop version of Spotify."
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -533,6 +539,7 @@ CHECK_LIST = (
     DisableRotationSuggest,
     ZygiskNext,
     MagiskOverlayfs,
+    SpotX,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
