@@ -367,7 +367,7 @@ class SpotX(GithubReleases):
 
 class BootloaderSpoofer(GithubReleases):
     fullname = "BootloaderSpoofer"
-    repository_url = chiteroman/BootloaderSpoofer" 
+    repository_url = "chiteroman/BootloaderSpoofer" 
     developer = "chiteroman"    
     description = "Spoof locked bootloader on local attestations."
 
