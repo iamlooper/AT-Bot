@@ -365,6 +365,36 @@ class SpotX(GithubReleases):
     developer = "SpotX-Official"    
     description = "SpotX patcher used for patching the desktop version of Spotify."
 
+class BootloaderSpoofer(GithubReleases):
+    fullname = "BootloaderSpoofer"
+    repository_url = chiteroman/BootloaderSpoofer" 
+    developer = "chiteroman"    
+    description = "Spoof locked bootloader on local attestations."
+
+class Cromite(GithubReleases):
+    fullname = "Cromite"
+    repository_url = "uazo/cromite" 
+    developer = "uazo"    
+    description = "Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!"
+
+class AdAway(GithubReleases):
+    fullname = "AdAway"
+    repository_url = "AdAway/AdAway" 
+    developer = "AdAway"    
+    description = "AdAway is a free and open source ad blocker for Android."
+
+class Aria2App(GithubReleases):
+    fullname = "Aria2App"
+    repository_url = "devgianlu/Aria2App" 
+    developer = "devgianlu"    
+    description = "Aria2App is an advanced download manager based on aria2 that can handle remote servers too."
+
+class DuckDuckGo(GithubReleases):
+    fullname = "DuckDuckGo"
+    repository_url = "duckduckgo/Android" 
+    developer = "duckduckgo"    
+    description = "DuckDuckGo Android App."
+    
 # Pling
     
 class Pixelify(PlingCheck):
@@ -540,6 +570,11 @@ CHECK_LIST = (
     ZygiskNext,
     MagiskOverlayfs,
     SpotX,
+    BootloaderSpoofer,
+    Cromite,
+    AdAway,
+    Aria2App,
+    DuckDuckGo,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
