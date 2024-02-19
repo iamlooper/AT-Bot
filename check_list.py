@@ -497,12 +497,7 @@ class PixelPropsUp(PlingCheck):
 class MagiskGApps(SfCheck):
     fullname = "Magisk GApps"
     project_name = "magiskgapps" 
-    developer = "wacko1805"             
-               
-class LiteGApps(SfCheck):
-    fullname = "Lite GApps"
-    project_name = "LiteGapps" 
-    developer = "wahyu6070"
+    developer = "wacko1805"
                
 CHECK_LIST = (
     # Github
@@ -597,5 +592,4 @@ CHECK_LIST = (
     PixelPropsUp,
     # Sourceforge
     MagiskGApps,
-    LiteGApps
 )
