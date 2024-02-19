@@ -394,7 +394,49 @@ class DuckDuckGo(GithubReleases):
     repository_url = "duckduckgo/Android" 
     developer = "duckduckgo"    
     description = "DuckDuckGo Android App."
-    
+
+class MihonApp(GithubReleases):
+    fullname = "Mihon App"
+    repository_url = "mihonapp/mihon" 
+    developer = "mihonapp"    
+    description = "Discover and read manga, webtoons, comics, and more – easier than ever on your Android device."
+
+class Yōkai(GithubReleases):
+    fullname = "Yōkai"
+    repository_url = "null2264/yokai" 
+    developer = "null2264"    
+    description = "A free and open source manga reader"
+
+class TachiyomiS97(GithubReleases):
+    fullname = "TachiyomiS97"
+    repository_url = "Saud-97/TachiyomiS97" 
+    developer = "Saud-97"    
+    description = "Free and open source manga reader for Android. A faster version of Tachiyomi."
+
+class TachiyomiAZ(GithubReleases):
+    fullname = "TachiyomiAZ"
+    repository_url = "az4521/tachiyomiAZ" 
+    developer = "az4521"    
+    description = "Free and open source manga reader for Android."
+
+class TachiyomiJ2K(GithubReleases):
+    fullname = "TachiyomiJ2K"
+    repository_url = "Jays2Kings/tachiyomiJ2K" 
+    developer = "Jays2Kings"    
+    description = "TachiyomiJ2K is a free and open source manga reader for Android 6.0 and above. Based on the original Tachiyomi."
+
+class TachiyomiSY(GithubReleases):
+    fullname = "TachiyomiSY"
+    repository_url = "jobobby04/TachiyomiSY" 
+    developer = "jobobby04"    
+    description = "This version of Tachiyomi, TachiyomiSY was based off TachiyomiAZ."
+
+class ReVancedExtendedMagiskModule(GithubReleases):
+    fullname = "ReVanced Extended Magisk Module"
+    repository_url = "MatadorProBr/revanced-extended-magisk-module" 
+    developer = "MatadorProBr"    
+    description = "Extensive ReVanced Extended builder. Builds both modules and APKs. Updated hourly."
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -570,6 +612,13 @@ CHECK_LIST = (
     AdAway,
     Aria2App,
     DuckDuckGo,
+    MihonApp,
+    Yōkai,
+    TachiyomiS97,
+    TachiyomiAZ,
+    TachiyomiJ2K,
+    TachiyomiSY,
+    ReVancedExtendedMagiskModule,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
