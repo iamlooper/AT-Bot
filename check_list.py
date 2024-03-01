@@ -437,6 +437,18 @@ class ReVancedExtendedMagiskModule(GithubReleases):
     developer = "MatadorProBr"    
     description = "Extensive ReVanced Extended builder. Builds both modules and APKs. Updated hourly."
 
+class ReVancedMagiskModule(GithubReleases):
+    fullname = "ReVanced Magisk Module"
+    repository_url = "j-hc/revanced-magisk-module" 
+    developer = "j-hc"    
+    description = "Extensive ReVanced builder. Builds both modules and APKs. Updated daily."
+
+class ReVancedAPKs(GithubReleases):
+    fullname = "ReVanced APKs"
+    repository_url = "revanced-apks/build-apps" 
+    developer = "revanced-apks"    
+    description = "The ReVanced APKs."
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -619,6 +631,8 @@ CHECK_LIST = (
     TachiyomiJ2K,
     TachiyomiSY,
     ReVancedExtendedMagiskModule,
+    ReVancedMagiskModule,
+    ReVancedAPKs,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
