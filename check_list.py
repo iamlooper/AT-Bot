@@ -449,6 +449,24 @@ class ReVancedAPKs(GithubReleases):
     developer = "revanced-apks"    
     description = "The ReVanced APKs."
 
+class ProjectUnPOCO(GithubReleases):
+    fullname = "ProjectUnPOCO"
+    repository_url = "R9TRH/ProjectUnPOCO" 
+    developer = "R9TRH"    
+    description = "A Project made to restore original MIUI/HyperOS feelings on POCO ROMs."
+
+class CompatibleMagiskMirroring(GithubReleases):
+    fullname = "Compatible Magisk-mirroring"
+    repository_url = "Magisk-Modules-Alt-Repo/compatible-magisk-mirroring" 
+    developer = "yzyhk904"    
+    description = "A Magisk module providing the compatible Magisk-mirroring for installing pure Magisk modules on incompatible Magisk variants and KernelSU (incl. APatch)."
+
+class usbsamplerateunlocker(GithubReleases):
+    fullname = "usb-samplerate-unlocker"
+    repository_url = "Magisk-Modules-Alt-Repo/usb-samplerate-unlocker" 
+    developer = "yzyhk904"    
+    description = "USB (HAL) Audio Class drivers on Android have a limiter of sample rates at 96kHz. This magisk module unlocks the limiter."
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -633,6 +651,9 @@ CHECK_LIST = (
     ReVancedExtendedMagiskModule,
     ReVancedMagiskModule,
     ReVancedAPKs,
+    ProjectUnPOCO,
+    usbsamplerateunlocker,
+    CompatibleMagiskMirroring,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
