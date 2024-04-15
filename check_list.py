@@ -652,8 +652,8 @@ CHECK_LIST = (
     ReVancedMagiskModule,
     ReVancedAPKs,
     ProjectUnPOCO,
-    usbsamplerateunlocker,
     CompatibleMagiskMirroring,
+    usbsamplerateunlocker,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
