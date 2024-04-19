@@ -141,11 +141,6 @@ class YTAdAway(GithubReleases):
     repository_url = "wanam/YouTubeAdAway" 
     developer = "wanam"     
     
-class ReVancedYT(GithubReleases):
-    fullname = "Revanced YT"
-    repository_url = "shekhawat2/ReVancedYT" 
-    developer = "shekhawat2"         
-    
 class TachiyomiStable(GithubReleases):
     fullname = "Tachiyomi Manga Reader Stable"
     repository_url = "tachiyomiorg/tachiyomi" 
@@ -598,7 +593,6 @@ CHECK_LIST = (
     MiFreeform,
     GMSDoze,
     YTAdAway,
-    ReVancedYT,
     TachiyomiStable,
     TachiyomiPreview,
     GoogleDialerFramework,
