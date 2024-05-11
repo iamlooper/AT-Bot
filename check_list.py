@@ -462,6 +462,73 @@ class usbsamplerateunlocker(GithubReleases):
     developer = "yzyhk904"    
     description = "USB (HAL) Audio Class drivers on Android have a limiter of sample rates at 96kHz. This magisk module unlocks the limiter."
 
+class BunnyManager(GithubReleases):
+    fullname = "BunnyManager"
+    repository_url = "pyoncord/BunnyManager" 
+    developer = "pyoncord"    
+    description = "Easily install Bunny on Android"
+
+class YAMFsquared(GithubReleases):
+    fullname = "YAMFsquared"
+    repository_url = "kaii-lb/YAMFsquared" 
+    developer = "kaii-lb"    
+    description = "Yet Another, Yet Another Mi-FreeForm"
+
+class Accrescent(GithubReleases):
+    fullname = "Accrescent"
+    repository_url = "accrescent/accrescent" 
+    developer = "accrescent"    
+    description = "A novel Android app store focused on security, privacy, and usability"
+
+class Omnivore(GithubReleases):
+    fullname = "Omnivore"
+    repository_url = "omnivore-app/omnivore" 
+    developer = "omnivore-app"    
+    description = "Omnivore is a complete, open source read-it-later solution for people who like reading."
+
+class Lidarr(GithubReleases):
+    fullname = "Lidarr"
+    repository_url = "Lidarr/Lidarr" 
+    developer = "Lidarr"    
+    description = "Lidarr is a music collection manager for Usenet and BitTorrent users."
+
+class OFGB(GithubReleases):
+    fullname = "OFGB (Oh Frick Go Back)"
+    repository_url = "xM4ddy/OFGB" 
+    developer = "xM4ddy"
+    description = "GUI Tool To Removes Ads From Various Places Around Windows 11"
+
+class PicView(GithubReleases):
+    fullname = "PicView"
+    repository_url = "Ruben2776/PicView" 
+    developer = "Ruben2776"    
+    description = "PicView is a fast, free and fully customizable image viewer for Windows 10 and 11. It supports a vast range of image file types, including WEBP, GIF, SVG, PNG, JXL, HEIC, PSD and many others."
+
+class CuteMusic(GithubReleases):
+    fullname = "CuteMusic"
+    repository_url = "sosauce/CuteMusic" 
+    developer = "sosauce"    
+    description = "CuteMusic is a simple,lightweight and open-source offline music player app for Android written in Jetpack Compose & Media3"
+
+class BlissfulBackdrop(GithubReleases):
+    fullname = "Blissful Backdrop"
+    repository_url = "hvg2416/blissful_backdrop" 
+    developer = "hvg2416"    
+    description = "Blissful Backdrop is a Flutter desktop application that allows you to set wallpapers on your Windows machine. It provides a variety of wallpaper categories to choose from"
+
+class SigmaFileManager(GithubReleases):
+    fullname = "Sigma File Manager"
+    repository_url = "aleksey-hoffman/sigma-file-manager" 
+    developer = "aleksey-hoffman"    
+    description = "Sigma File Manager is a free, open-source, quickly evolving, modern file manager (explorer / finder) app for Windows and Linux."
+
+class Kitsune(GithubReleases):
+    fullname = "Kitsune"
+    repository_url = "Drumber/Kitsune" 
+    developer = "Drumber"    
+    description = "Unofficial android app for Kitsu.io. Discover new Anime and Manga and manage your Library"
+
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -648,6 +715,17 @@ CHECK_LIST = (
     ProjectUnPOCO,
     CompatibleMagiskMirroring,
     usbsamplerateunlocker,
+    BunnyManager,
+    YAMFsquared,
+    Accrescent,
+    Omnivore,
+    Lidarr,
+    OFGB,
+    PicView,
+    CuteMusic,
+    BlissfulBackdrop,
+    SigmaFileManager,
+    Kitsune,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
