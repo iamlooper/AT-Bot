@@ -528,6 +528,35 @@ class Kitsune(GithubReleases):
     developer = "Drumber"    
     description = "Unofficial android app for Kitsu.io. Discover new Anime and Manga and manage your Library"
 
+class AudioShare(GithubReleases):
+    fullname = "Audio Share"
+    repository_url = "mkckr0/audio-share" 
+    developer = "mkckr0"    
+    description = "Audio Share can share Windows/Linux computer's audio to Android phone over network, so your phone becomes the speaker of computer."
+
+class Yosu(GithubReleases):
+    fullname = "Yosu"
+    repository_url = "jerry08/Yosu" 
+    developer = "jerry08"    
+    description = "Yosu is an android application to download video/audio from Youtube, Soundcloud and Spotify."
+
+class SmartDock(GithubReleases):
+    fullname = "Smart Dock"
+    repository_url = "axel358/smartdock" 
+    developer = "axel358"    
+    description = "A user-friendly desktop mode launcher that offers a modern and customizable user interface."
+
+class SoundTap(GithubReleases):
+    fullname = "SoundTap"
+    repository_url = "Angel-Studio/SoundTap" 
+    developer = "Angel-Studio"    
+    description = "SoundTap is an Android app that enhances your music listening experience by allowing you to control playback using your device's volume buttons."
+
+class NewPass(GithubReleases):
+    fullname = "NewPass"
+    repository_url = "6eero/NewPass" 
+    developer = "6eero"    
+    description = "NewPass is a free and open source password manager which will allow you to generate and store your passwords securely, saving them locally and encrypting them on your phone's memory."
 
 # Pling
     
@@ -726,6 +755,11 @@ CHECK_LIST = (
     BlissfulBackdrop,
     SigmaFileManager,
     Kitsune,
+    AudioShare,
+    Yosu,
+    SmartDock,
+    SoundTap,
+    NewPass,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
