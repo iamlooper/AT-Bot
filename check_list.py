@@ -558,6 +558,12 @@ class NewPass(GithubReleases):
     developer = "6eero"    
     description = "NewPass is a free and open source password manager which will allow you to generate and store your passwords securely, saving them locally and encrypting them on your phone's memory."
 
+class ViTune(GithubReleases):
+    fullname = "ViTune"
+    repository_url = "25huizengek1/ViTune" 
+    developer = "25huizengek1"    
+    description = "An Android application for seamless music streaming."
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -760,6 +766,7 @@ CHECK_LIST = (
     SmartDock,
     SoundTap,
     NewPass,
+    ViTune,
     # Pling
     Pixelify,
     Dex2oatOptimizer,
