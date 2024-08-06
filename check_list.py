@@ -589,12 +589,7 @@ class AtAGlanceEnhancer(PlingCheck):
 class XCharge(PlingCheck):
     fullname = "XCharge"
     p_id = 1832596  
-    developer = "iamlooper"            
-    
-class XEngine(PlingCheck):
-    fullname = "XEngine"
-    p_id = 1704617  
-    developer = "iamlooper"            
+    developer = "iamlooper"         
     
 class XLoad(PlingCheck):
     fullname = "XLoad"
@@ -773,7 +768,6 @@ CHECK_LIST = (
     MemeUIEnhancer,
     AtAGlanceEnhancer,
     XCharge,
-    XEngine,
     XLoad,
     DolbyAtmosMM,
     MPL,

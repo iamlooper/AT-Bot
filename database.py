@@ -1,24 +1,25 @@
 import os
+import hashlib
+import time
 from collections import OrderedDict
 from contextlib import contextmanager
+from config import DROPBOX_ACCESS_TOKEN
 
 from sqlalchemy import create_engine, Column, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
-from config import (
-    MYSQL_HOST, 
-    MYSQL_PORT, 
-    MYSQL_USER, 
-    MYSQL_PASSWORD, 
-    MYSQL_DATABASE
-)
+import dropbox
+from dropbox.exceptions import AuthError, ApiError
+from dropbox.files import WriteMode
 
 _Base = declarative_base()
-_Engine = create_engine(
-    f"mysql+mysqlconnector://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}:{MYSQL_PORT}/{MYSQL_DATABASE}"
-)
+
+_Engine = create_engine('sqlite:///at_bot_database.db')
+
 _DBSession = sessionmaker(bind=_Engine)
+
+DROPBOX_FILENAME = "/at_bot_database.db"
+LOCAL_FILENAME = "at_bot_database.db"
 
 @contextmanager
 def create_dbsession(**kw):
@@ -29,7 +30,7 @@ def create_dbsession(**kw):
         session.close()
 
 class Saved(_Base):
-    __tablename__ = "amt_bot"
+    __tablename__ = "main_table"
     ID = Column(String(255), primary_key=True, nullable=False)
     FULL_NAME = Column(String(255), nullable=False)
     LATEST_VERSION = Column(String(255))
@@ -68,4 +69,67 @@ class Saved(_Base):
         with create_dbsession() as session:
             return session.query(cls).filter(cls.ID == name).one()
 
-_Base.metadata.create_all(_Engine)
+def get_dropbox_file_hash(filename):
+    hasher = hashlib.sha256()
+    with open(filename, 'rb') as f:
+        while True:
+            chunk = f.read(4 * 1024 * 1024)  # Read in 4MB blocks
+            if not chunk:
+                break
+            block_hash = hashlib.sha256(chunk).digest()
+            hasher.update(block_hash)
+    return hasher.hexdigest()
+
+def upload_to_dropbox(dbx):
+    with open(LOCAL_FILENAME, "rb") as f:
+        try:
+            dbx.files_upload(f.read(), DROPBOX_FILENAME, mode=WriteMode("overwrite"))
+            print(f"Database uploaded to Dropbox: {DROPBOX_FILENAME}")
+        except ApiError as e:
+            print(f"Error uploading database to Dropbox: {str(e)}")
+
+def download_from_dropbox(dbx):
+    try:
+        _, response = dbx.files_download(DROPBOX_FILENAME)
+        with open(LOCAL_FILENAME, "wb") as f:
+            f.write(response.content)
+        print(f"Database downloaded from Dropbox: {DROPBOX_FILENAME}")
+        return True
+    except ApiError as e:
+        print(f"Error downloading database from Dropbox: {str(e)}")
+        return False
+
+def sync_database():
+    try:
+        dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
+    except AuthError:
+        print("Invalid access token. Please check your Dropbox access token.")
+        return
+    
+    if not os.path.exists(LOCAL_FILENAME):
+        if not download_from_dropbox(dbx):
+            print("Creating new local database.")
+            _Base.metadata.create_all(_Engine)
+        return
+
+    local_hash = get_dropbox_file_hash(LOCAL_FILENAME)
+    try:
+        metadata = dbx.files_get_metadata(DROPBOX_FILENAME)
+        dropbox_hash = metadata.content_hash
+    except ApiError as e:
+        print(f"Error getting file metadata: {str(e)}")
+        dropbox_hash = None
+
+    if dropbox_hash is None or local_hash != dropbox_hash:
+        upload_to_dropbox(dbx)
+
+def periodic_sync(interval=300):  # Default interval: 5 minutes
+    while True:
+        sync_database()
+        time.sleep(interval)
+
+# Initialize database and start periodic sync
+sync_database()
+import threading
+sync_thread = threading.Thread(target=periodic_sync, daemon=True)
+sync_thread.start()

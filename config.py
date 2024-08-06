@@ -36,17 +36,5 @@ GH_USERNAME = str(os.getenv("GH_USERNAME"))
 # GitHub token
 GH_TOKEN = str(os.getenv("GH_TOKEN"))
 
-# MySQL host
-MYSQL_HOST = str(os.getenv("MYSQL_HOST"))
-
-# MySQL port
-MYSQL_PORT = int(os.getenv("MYSQL_PORT"))
-
-# MySQL user
-MYSQL_USER = str(os.getenv("MYSQL_USER"))
-
-# MySQL password
-MYSQL_PASSWORD = str(os.getenv("MYSQL_PASSWORD"))
-
-# MySQL database
-MYSQL_DATABASE = str(os.getenv("MYSQL_DATABASE"))
+# Dropbox access token
+DROPBOX_ACCESS_TOKEN = str(os.getenv("DROPBOX_ACCESS_TOKEN"))

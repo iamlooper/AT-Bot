@@ -1,9 +1,8 @@
-requests
-beautifulsoup4
-bs4
-SQLAlchemy
-pyTelegramBotAPI
-mysql-connector-python
-lxml
-prettytable
-gitpython
+requests==2.32.3
+beautifulsoup4==4.12.3
+SQLAlchemy==2.0.32
+pyTelegramBotAPI==4.22.0
+mysql-connector-python==9.0.0
+lxml==5.2.2
+prettytable==3.10.2
+pysqlite3==0.5.3
