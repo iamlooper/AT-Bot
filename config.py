@@ -36,5 +36,11 @@ GH_USERNAME = str(os.getenv("GH_USERNAME"))
 # GitHub token
 GH_TOKEN = str(os.getenv("GH_TOKEN"))
 
-# Dropbox access token
-DROPBOX_ACCESS_TOKEN = str(os.getenv("DROPBOX_ACCESS_TOKEN"))
+# Dropbox app key
+DROPBOX_APP_KEY = str(os.getenv("DROPBOX_APP_KEY"))
+
+# Dropbox app secret
+DROPBOX_APP_SECRET = str(os.getenv("DROPBOX_APP_SECRET"))
+
+# Dropbox refresh token
+DROPBOX_REFRESH_TOKEN = str(os.getenv("DROPBOX_REFRESH_TOKEN"))

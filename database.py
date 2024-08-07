@@ -3,7 +3,11 @@ import hashlib
 import time
 from collections import OrderedDict
 from contextlib import contextmanager
-from config import DROPBOX_ACCESS_TOKEN
+from config import (
+    DROPBOX_APP_KEY,
+    DROPBOX_APP_SECRET,
+    DROPBOX_REFRESH_TOKEN
+)
 
 from sqlalchemy import create_engine, Column, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -101,9 +105,13 @@ def download_from_dropbox(dbx):
 
 def sync_database():
     try:
-        dbx = dropbox.Dropbox(DROPBOX_ACCESS_TOKEN)
+        dbx = dropbox.Dropbox(
+            app_key=DROPBOX_APP_KEY,
+            app_secret=DROPBOX_APP_SECRET,
+            oauth2_refresh_token=DROPBOX_REFRESH_TOKEN
+        )
     except AuthError:
-        print("Invalid access token. Please check your Dropbox access token.")
+        print("Dropbox authentication error.")
         return
     
     if not os.path.exists(LOCAL_FILENAME):
