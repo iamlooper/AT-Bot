@@ -570,41 +570,11 @@ class Pixelify(PlingCheck):
     fullname = "Pixelify"
     p_id = 1825201  
     developer = "shivan999"  
-   
-class Dex2oatOptimizer(PlingCheck):
-    fullname = "dex2oat optimizer"
-    p_id = 1819191  
-    developer = "iamlooper" 
-         
-class MemeUIEnhancer(PlingCheck):
-    fullname = "MemeUI Enhancer"
-    p_id = 1723021  
-    developer = "iamlooper"      
-    
-class AtAGlanceEnhancer(PlingCheck):
-    fullname = "At A Glance Enhancer"
-    p_id = 1833656  
-    developer = "iamlooper"              
-    
-class XCharge(PlingCheck):
-    fullname = "XCharge"
-    p_id = 1832596  
-    developer = "iamlooper"         
-    
-class XLoad(PlingCheck):
-    fullname = "XLoad"
-    p_id = 1726993  
-    developer = "iamlooper"    
     
 class DolbyAtmosMM(PlingCheck):
     fullname = "Dolby Atmos Magic Revision"
     p_id = 1610004  
-    developer = "reiryuki"          
-    
-class MPL(PlingCheck):
-    fullname = "Mod Pixel Launcher"
-    p_id = 1720688  
-    developer = "saitama96"         
+    developer = "reiryuki"    
     
 class MemeUIMods(PlingCheck):
     fullname = "MemeUI Mods"
@@ -629,17 +599,7 @@ class Nitron(PlingCheck):
 class Magnetar(PlingCheck):
     fullname = "Magnetar Performance Optimizer"
     p_id = 1465345  
-    developer = "kyliekyler"     
-    
-class PLOMA13(PlingCheck):
-    fullname = "Pixel Launcher Original & Modified A13"
-    p_id = 1915907  
-    developer = "saitama96"      
-    
-class AndroidEnhancer(PlingCheck):
-    fullname = "Android Enhancer"
-    p_id = 1875251  
-    developer = "iamlooper"     
+    developer = "kyliekyler"
                
 class CoolModules(PlingCheck):
     fullname = "Cool Modules"
@@ -764,20 +724,12 @@ CHECK_LIST = (
     ViTune,
     # Pling
     Pixelify,
-    Dex2oatOptimizer,
-    MemeUIEnhancer,
-    AtAGlanceEnhancer,
-    XCharge,
-    XLoad,
     DolbyAtmosMM,
-    MPL,
     MemeUIMods,
     StratospherePerf,
     AudioWizardDTSXUltraZen6MM,    
     Nitron,
     Magnetar,
-    PLOMA13,
-    AndroidEnhancer,
     CoolModules, 
     PixelLauncherExtended,
     PixelPropsUp,
