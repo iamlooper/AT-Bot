@@ -564,6 +564,24 @@ class ViTune(GithubReleases):
     developer = "25huizengek1"    
     description = "An Android application for seamless music streaming."
 
+class ZygiskAssistant(GithubReleases):
+    fullname = "Zygisk-Assistant"
+    repository_url = "snake-4/Zygisk-Assistant" 
+    developer = "snake-4"    
+    description = "A Zygisk module to hide root for KernelSU, Magisk and APatch, designed to work on Android 5.0 and above."
+
+class ReVancedPatches(GithubReleases):
+    fullname = "ReVanced Patches"
+    repository_url = "ReVanced/revanced-patches" 
+    developer = "ReVanced"    
+    description = "Patches are small modifications to Android apps that allow you to change the behavior of or add new features, block ads, customize the appearance, and much more."
+
+class NeoBackup(GithubReleases):
+    fullname = "Neo Backup"
+    repository_url = "NeoApplications/Neo-Backup" 
+    developer = "NeoApplications"    
+    description = "Backup manager for android"
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -722,6 +740,10 @@ CHECK_LIST = (
     SoundTap,
     NewPass,
     ViTune,
+    ZygiskAssistant,
+    ReVancedPatches,
+    NeoBackup,
+    NeoBackup,
     # Pling
     Pixelify,
     DolbyAtmosMM,
