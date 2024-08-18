@@ -743,7 +743,6 @@ CHECK_LIST = (
     ZygiskAssistant,
     ReVancedPatches,
     NeoBackup,
-    NeoBackup,
     # Pling
     Pixelify,
     DolbyAtmosMM,
