@@ -52,6 +52,14 @@ check_and_update() {
     fi
 }
 
+# Install SQLite
+apt update
+apt install -y libsqlite3-dev
+
+# Install python packages
+echo "Installing python packages..."
+pip install -qUr requirements.txt
+
 # Start the main script
 python main.py --auto &
 MAIN_PID=$!
