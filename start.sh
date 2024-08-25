@@ -40,7 +40,7 @@ check_and_update() {
 
         # Upgrade python packages
         echo "Upgrading python packages..."
-        pip install -qUr requirements.txt
+        pip install --ignore-installed -qUr requirements.txt
 
         # Get and print commit details
         echo "Update successful. Commit details:"
@@ -58,7 +58,7 @@ apt install -y libsqlite3-dev
 
 # Install python packages
 echo "Installing python packages..."
-pip install -qUr requirements.txt
+pip install --ignore-installed -qUr requirements.txt
 
 # Start the main script
 python main.py --auto &
