@@ -582,6 +582,18 @@ class NeoBackup(GithubReleases):
     developer = "NeoApplications"    
     description = "Backup manager for android"
 
+class Iconify(GithubReleases):
+    fullname = "Iconify"
+    repository_url = "Mahmud0808/Iconify" 
+    developer = "Mahmud0808"    
+    description = "Iconify lets you customize your Android 12+ device easily. Change icons, colors, shapes, and even the notification panel for a personalized look that suits your style."
+
+class ColorBlendr(GithubReleases):
+    fullname = "ColorBlendr"
+    repository_url = "Mahmud0808/ColorBlendr" 
+    developer = "Mahmud0808"    
+    description = "An Android app for customizing Material You colors on devices with Android 12+. It lets you tweak accent colors, background saturation, and more for a personalized look."
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -743,6 +755,8 @@ CHECK_LIST = (
     ZygiskAssistant,
     ReVancedPatches,
     NeoBackup,
+    Iconify,
+    ColorBlendr,
     # Pling
     Pixelify,
     DolbyAtmosMM,
