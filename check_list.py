@@ -602,7 +602,7 @@ class PixelSpoof(GithubReleases):
 
 class ReMalwack(GithubReleases):
     fullname = "Re-Malwack"
-    repository_url = "ZG089/Re-Malwackp" 
+    repository_url = "ZG089/Re-Malwack" 
     developer = "ZG089"    
     description = "An Unofficial Re-Awakening of Malwack Magisk Module !"
 
