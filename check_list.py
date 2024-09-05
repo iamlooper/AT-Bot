@@ -594,6 +594,18 @@ class ColorBlendr(GithubReleases):
     developer = "Mahmud0808"    
     description = "An Android app for customizing Material You colors on devices with Android 12+. It lets you tweak accent colors, background saturation, and more for a personalized look."
 
+class PixelSpoof(GithubReleases):
+    fullname = "PixelSpoof"
+    repository_url = "RisenID/PixelSpoof" 
+    developer = "RisenID"    
+    description = "PixelSpoof is a module for LSPosed that lets you spoof all device-specific properties of your device, selectively for individual apps, to a high end Pixel device (Currently Pixel 8 Pro(husky) and Pixel 9 Pro(caiman))"
+
+class ReMalwack(GithubReleases):
+    fullname = "Re-Malwack"
+    repository_url = "ZG089/Re-Malwackp" 
+    developer = "ZG089"    
+    description = "An Unofficial Re-Awakening of Malwack Magisk Module !"
+
 # Pling
     
 class Pixelify(PlingCheck):
@@ -757,6 +769,8 @@ CHECK_LIST = (
     NeoBackup,
     Iconify,
     ColorBlendr,
+    PixelSpoof,
+    ReMalwack,
     # Pling
     Pixelify,
     DolbyAtmosMM,
