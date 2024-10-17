@@ -1,71 +1,67 @@
 #!/bin/bash
 
-# Function to stop the main process gracefully, then forcefully if necessary
+log_message() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1"
+}
+
 stop_main_process() {
-    if kill -TERM $MAIN_PID 2>/dev/null; then
-        echo "Sent SIGTERM to main process $MAIN_PID. Waiting for it to exit..."
+    if [ -n "$MAIN_PID" ]; then
+        kill -TERM $MAIN_PID 2>/dev/null
         for i in {1..30}; do
             if ! kill -0 $MAIN_PID 2>/dev/null; then
-                echo "Main process stopped gracefully."
+                log_message "Main process stopped gracefully"
                 return
             fi
             sleep 1
         done
-    fi
-
-    if kill -0 $MAIN_PID 2>/dev/null; then
-        echo "Main process did not stop gracefully. Forcing termination..."
-        kill -9 $MAIN_PID
-        echo "Main process terminated forcefully."
+        log_message "Forcing termination of main process"
+        kill -9 $MAIN_PID 2>/dev/null
     fi
 }
 
-# Function to check for updates and restart if necessary
-check_and_update() {
-    # Fetch the latest changes
-    git fetch origin --quiet
+install_packages() {
+    log_message "Installing python packages..."
+    while IFS= read -r package; do
+        if ! pip install -q "$package"; then
+            log_message "Failed to install package: $package"
+        fi
+    done < requirements.txt
+}
 
-    # Compare local and remote HEADs
-    LOCAL=$(git rev-parse HEAD)
-    REMOTE=$(git rev-parse @{u})
+update_and_restart() {
+    log_message "Updating..."
+    stop_main_process
+    git pull --force --quiet
+    install_packages
+    log_message "Update complete: $(git log -1 --oneline)"
+    start_main_process
+}
 
-    if [ $LOCAL != $REMOTE ]; then
-        echo "Updates available. Updating now..."
-        
-        # Stop the main process
-        stop_main_process
+start_main_process() {
+    (python main.py --auto &)&
+    MAIN_PID=$!
+    log_message "Started main process (PID: $MAIN_PID)"
+}
 
-        # Force pull the latest changes
-        git pull --force --quiet
-
-        # Upgrade python packages
-        echo "Upgrading python packages..."
-        pip install --ignore-installed -qUr requirements.txt
-
-        # Get and print commit details
-        echo "Update successful. Commit details:"
-        git log -1 --oneline
-
-        # Restart the main script
-        python main.py --auto &
-        MAIN_PID=$!
+check_for_updates() {
+    git fetch origin main --quiet
+    if [ $(git rev-list HEAD...origin/main --count) -gt 0 ]; then
+        update_and_restart
     fi
 }
 
-# Install SQLite
-apt update
-apt install -y libsqlite3-dev
+trap 'stop_main_process; exit' SIGINT SIGTERM
 
-# Install python packages
-echo "Installing python packages..."
-pip install --ignore-installed -qUr requirements.txt
+# Install SQLite (using Alpine)
+apk update
+apk add -q --no-cache sqlite-dev
 
-# Start the main script
-python main.py --auto &
-MAIN_PID=$!
+install_packages
 
-# Continuous loop to check for updates
+start_main_process
+
+# Main loop to periodically check for updates
 while true; do
-    check_and_update
-    sleep 60
+    check_for_updates
+    sleep 60  # Wait for 60 seconds before next check
 done
