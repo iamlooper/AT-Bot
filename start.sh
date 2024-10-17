@@ -21,7 +21,7 @@ stop_main_process() {
 
 install_packages() {
     log_message "Installing python packages..."
-    pip install -r requirements.txt
+    pip install -qr requirements.txt
 }
 
 update_and_restart() {
