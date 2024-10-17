@@ -21,11 +21,7 @@ stop_main_process() {
 
 install_packages() {
     log_message "Installing python packages..."
-    while IFS= read -r package; do
-        if ! pip install -q "$package"; then
-            log_message "Failed to install package: $package"
-        fi
-    done < requirements.txt
+    pip install -r requirements.txt
 }
 
 update_and_restart() {
