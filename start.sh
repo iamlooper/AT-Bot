@@ -34,7 +34,7 @@ update_and_restart() {
 }
 
 start_main_process() {
-    (python main.py --auto &)&
+    python main.py --auto &
     MAIN_PID=$!
     log_message "Started main process (PID: $MAIN_PID)"
 }
